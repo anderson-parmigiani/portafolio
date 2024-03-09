@@ -44,6 +44,7 @@ const versionWebp = () => {
         .pipe(webp(opciones))
         .pipe(dest('build/img'))
 }
+
 const versionAvif = () => {
     const opciones = {
         quality: 50
@@ -58,7 +59,6 @@ const dev = () => {
     watch('*.js', js);
     watch('src/img/**/*', series(imagenes, versionWebp, versionAvif));
 }
-
 
 exports.css = css;
 exports.js = js;
