@@ -1,5 +1,5 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
 
 .presentacion {
 
@@ -353,9 +353,9 @@
         background-position: top right;
         margin-right: -1px;
         background-image: image-set(
-            url(../../../../build/img/mixtas/proyecto_sistema.avif),
-            url(../../../../build/img/mixtas/proyecto_sistema.webp),
-            url(../../../../build/img/mixtas/proyecto_sistema.png)
+            url(/assets/img/mixtas/proyecto_sistema.avif),
+            url(/assets/img/mixtas/proyecto_sistema.webp),
+            url(/assets/img/mixtas/proyecto_sistema.png)
         );
     }
     &__imagen-portafolio {
@@ -363,9 +363,9 @@
         background-size: contain;
         background-position: center, left;
         background-image: image-set(
-            url(../../../../build/img/mixtas/proyecto_portafolio.avif),
-            url(../../../../build/img/mixtas/proyecto_portafolio.webp),
-            url(../../../../build/img/mixtas/proyecto_portafolio.png)
+            url(/assets/img/mixtas/proyecto_portafolio.avif),
+            url(/assets/img/mixtas/proyecto_portafolio.webp),
+            url(/assets/img/mixtas/proyecto_portafolio.png)
         ), 
         linear-gradient(to bottom, v.$primario 0%, v.$primario 100%),
         linear-gradient(to bottom, #2f2c56 0%, #2f2c56 100%),
@@ -404,9 +404,12 @@
     }
 
     &__lenguaje {
+        &:last-of-type {
+            padding-left: .5rem;
+        }
         &:not(:last-of-type) {
             border-right: 2px solid v.$terciario;
-            padding-right: .5rem;
+            padding-inline: .5rem;
         }
         text-transform: uppercase;
         color: v.$terciario;
@@ -425,7 +428,7 @@
         }
 
         &[href*="github"]::after {
-            background-image: url(../../../build/img/iconos/github_black.svg);
+            background-image: url(/assets/img/iconos/github_black.svg);
         }
     }
 
@@ -439,4 +442,3 @@
         overflow: hidden;
     }
 }
-

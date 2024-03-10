@@ -1,4 +1,4 @@
-@use './base';
-@use './ui/header';
-@use './ui/contenido';
-@use './ui/footer';
+@use './base/' as base;
+@use './ui/header' as header;
+@use './ui/content' as content;
+@use './ui/footer' as footer;

@@ -1,5 +1,5 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
 
 .header {
     background-color: v.$primario;
@@ -81,7 +81,7 @@
         border-bottom-right-radius: 1.6rem;
         width: 4rem;
         height: 100%;
-        background-image: url(../../../build/img/iconos/copy.svg), linear-gradient(to right, lighten(v.$beige, 10%) 0%, lighten(v.$beige, 10%) 100%);
+        background-image: url(/assets/img/iconos/copy.svg), linear-gradient(to right, lighten(v.$beige, 10%) 0%, lighten(v.$beige, 10%) 100%);
         background-repeat: no-repeat;
         background-position: center center, center;
         background-size: 2rem, auto;
@@ -98,7 +98,6 @@
         font-size: 1.4rem;
         font-weight: 700;
         border-radius: 1.6rem;
-        display: none;
     }
 }
 
@@ -126,13 +125,13 @@
         }
 
         &[href*="CV"]::after {
-            background-image: url(../../../build/img/iconos/cv.svg);
+            background-image: url(/assets/img/iconos/cv.svg);
         }
         &[href*="linkedin"]::after {
-            background-image: url(../../../build/img/iconos/linkedin.svg);
+            background-image: url(/assets/img/iconos/linkedin.svg);
         }
         &[href*="github"]::after {
-            background-image: url(../../../build/img/iconos/github.svg);
+            background-image: url(/assets/img/iconos/github.svg);
         }
     }
     &__accesible {
